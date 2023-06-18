@@ -50,6 +50,8 @@
 }
 
 .habits-new {
+  margin: auto;
+  margin-top: 2rem;
   background-color: var(--primary);
   color: #fff;
 }

@@ -11,10 +11,11 @@ export const Home = () => {
   return (
     <div>
       <h1>Your habits</h1>
+      <div onClick={() => addNewPopHandler()} className="habits-new">
+        {" "}
+        <h2>Create My Own</h2>
+      </div>
       <ul className="habits-list">
-        <li onClick={() => addNewPopHandler()} className="habits-new">
-          <h2>Create My Own</h2>
-        </li>
         {removeArchivedHabit?.map((habit) => (
           <li key={habit.id} className="habits-single">
             <Card habit={habit} />
