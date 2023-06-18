@@ -59,8 +59,6 @@ export const DataProvider = ({ children }) => {
     startDay: "",
   });
 
-  console.log(state);
-
   const saveHandler = () => {
     const newHabit = { ...state, id: uuidv4(), archive: false };
     setHabitsData((h) => [...h, newHabit]);
@@ -91,6 +89,7 @@ export const DataProvider = ({ children }) => {
     const findHabitIndex = habitsData.findIndex(
       (habit) => habit.id === selectedId
     );
+    console.log(state);
 
     setHabitsData((h) => [
       ...h.slice(0, findHabitIndex),
@@ -105,12 +104,10 @@ export const DataProvider = ({ children }) => {
   };
 
   const archiveHabitHandler = (selectedId) => {
-    console.log("archeive");
     const updatedData = habitsData.map((habit) =>
       habit.id === selectedId ? { ...habit, archive: !habit.archive } : habit
     );
     setHabitsData(() => updatedData);
-    console.log(updatedData);
   };
 
   return (
