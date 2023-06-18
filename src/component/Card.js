@@ -9,7 +9,7 @@ export const Card = ({ habit }) => {
       <button onClick={() => editHandler(habit.id)}>Edit</button>
       <button onClick={() => deleteHabitHandler(habit.id)}>Delete</button>
       <button onClick={() => archiveHabitHandler(habit.id)}>
-        {habit.archive ? "Archived" : "Archive"}
+        {habit.archive ? "UnArchive" : "Archive"}
       </button>
     </div>
   );
